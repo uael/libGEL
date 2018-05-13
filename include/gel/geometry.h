@@ -13,7 +13,7 @@
 #ifndef GEL_GEOMETRY_H
 # define GEL_GEOMETRY_H
 
-# include "math/vector.h"
+# include "math.h"
 
 # include "geometry/box.h"
 # include "geometry/capsule.h"
