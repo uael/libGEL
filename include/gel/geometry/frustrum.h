@@ -3,7 +3,7 @@
 
 # include "gel/geometry/box.h"
 # include "gel/math/vector.h"
-# include "gel/math/matrice.h"
+# include "gel/math/matrix.h"
 
 typedef struct  s_frustrum
 {

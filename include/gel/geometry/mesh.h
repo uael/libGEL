@@ -2,7 +2,7 @@
 #define GEL_MESH_H
 
 # include "gel/math/vector.h"
-# include "gel/math/matrice.h"
+# include "gel/math/matrix.h"
 # include "gel/geometry/vertex.h"
 # include "gel/geometry/sphere.h"
 

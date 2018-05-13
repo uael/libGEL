@@ -2,7 +2,7 @@
 # define GEL_CAPSULE_H
 
 # include "gel/math/vector.h"
-# include "gel/math/matrice.h"
+# include "gel/math/matrix.h"
 # include "gel/geometry/plane.h"
 
 typedef struct s_capsule

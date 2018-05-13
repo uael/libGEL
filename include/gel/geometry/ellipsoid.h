@@ -2,7 +2,7 @@
 # define GEL_ELLIPSOID_H
 
 # include "gel/math/vector.h"
-# include "gel/math/matrice.h"
+# include "gel/math/matrix.h"
 # include "gel/geometry/sphere.h"
 
 typedef struct s_ellipsoid

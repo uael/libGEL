@@ -2,7 +2,7 @@
 # define GEL_SPHERE_H
 
 # include "gel/math/vector.h"
-# include "gel/math/matrice.h"
+# include "gel/math/matrix.h"
 # include "gel/geometry/frustrum.h"
 # include "gel/geometry/plane.h"
 
