@@ -19,7 +19,7 @@ file(GLOB_RECURSE gel_HDRS ${gel_HDRS} ${gel_SRC_DIR}/*.c)
 set(gel_HDR ${gel_INC_DIR}/gel.h)
 
 add_library(gel ${gel_SRCS} ${gel_HDRS} ${gel_HDR})
-target_include_directories(gel PUBLIC ${gel_INC_DIR})
+target_include_directories(gel PUBLIC ${gel_INC_DIR} ${SDL2_INCLUDE_DIR})
 target_link_libraries(gel PUBLIC ${SDL2_LIBRARY})
 target_compile_options(gel PUBLIC -Wall -Werror -Wextra -ansi)
 

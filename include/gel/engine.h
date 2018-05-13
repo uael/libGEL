@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gel.h                                              :+:      :+:    :+:   */
+/*   gel/engine.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GEL_H
-# define GEL_H
+#ifndef GEL_ENGINE_H
+# define GEL_ENGINE_H
 
-# include "gel/engine.h"
-# include "gel/geometry.h"
-# include "gel/math.h"
+# include <SDL2/SDL.h>
+# include <SDL2/SDL_opengl.h>
+# include <SDL2/SDL_rwops.h>
+# include <SDL2/SDL_mixer.h>
+# include <SDL2/SDL_net.h>
+
+# include "math.h"
 
 #endif

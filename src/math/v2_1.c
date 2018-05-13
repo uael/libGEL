@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gel.h                                              :+:      :+:    :+:   */
+/*   math/v2_1.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GEL_H
-# define GEL_H
+#include <gel/math/vector.h>
 
-# include "gel/engine.h"
-# include "gel/geometry.h"
-# include "gel/math.h"
+t_v2	v2(float x, float y)
+{
+	t_v2 v;
 
-#endif
+	v.x = x;
+	v.y = y;
+	return (v);
+}
+
+t_v2	v2zero(void)
+{
+	return v2(0, 0);
+}
+
+t_v2	v2one(void)
+{
+	return v2(1, 1);
+}
+
+t_v2	v2add(t_v2 v1, t_v2 v2)
+{
+	t_v2 v;
+
+	v.x = v1.x + v2.x;
+	v.y = v1.y + v2.y;
+	return (v);
+}
+
+t_v2	v2sub(t_v2 v1, t_v2 v2)
+{
+	t_v2 v;
+
+	v.x = v1.x - v2.x;
+	v.y = v1.y - v2.y;
+	return (v);
+}

@@ -65,6 +65,7 @@
 #  License text for the above reference.)
 
 set(SDL2_SEARCH_PATHS
+	~/.brew
 	~/Library/Frameworks
 	/Library/Frameworks
 	/usr/local
@@ -73,7 +74,6 @@ set(SDL2_SEARCH_PATHS
 	/opt/local # DarwinPorts
 	/opt/csw # Blastwave
 	/opt
-	~/.brew
 	${SDL2_PATH}
 	)
 
@@ -81,7 +81,7 @@ find_path(SDL2_INCLUDE_DIR SDL.h
 	HINTS
 	$ENV{SDL2DIR}
 	PATH_SUFFIXES include/SDL2 include
-	PATHS ${SDL2_SEARCH_PATHS} ${SDL2_LIBRARY_TEMP}/../..
+	PATHS ${SDL2_SEARCH_PATHS}
 	)
 
 find_library(SDL2_LIBRARY_TEMP
@@ -161,4 +161,5 @@ endif (SDL2_LIBRARY_TEMP)
 
 include(FindPackageHandleStandardArgs)
 
+set(SDL2_INCLUDE_DIR "${SDL2_INCLUDE_DIR}/..")
 find_package_handle_standard_args(SDL2 REQUIRED_VARS SDL2_LIBRARY SDL2_INCLUDE_DIR)

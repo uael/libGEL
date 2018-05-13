@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gel.h                                              :+:      :+:    :+:   */
+/*   gel/geometry.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GEL_H
-# define GEL_H
+#ifndef GEL_GEOMETRY_H
+# define GEL_GEOMETRY_H
 
-# include "gel/engine.h"
-# include "gel/geometry.h"
-# include "gel/math.h"
+# include "math/vector.h"
 
 #endif
