@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math/clamp.h                                       :+:      :+:    :+:   */
+/*   gel/math/math.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <gel/math/clamp.h>
+#ifndef GEL_MATH_MATH_H
+# define GEL_MATH_MATH_H
 
-inline float	clampf(float x, float bottom, float top)
-{
-	x = fmaxf(x, bottom);
-	x = fminf(x, top);
-	return (x);
-}
+# include <math.h>
+# include <stdbool.h>
+
+extern float	clampf(float x, float bottom, float top);
+
+#endif

@@ -3,6 +3,7 @@
 
 # include "gel/math/vector.h"
 # include "gel/math/matrice.h"
+# include "plane.h"
 
 typedef struct  s_box
 {

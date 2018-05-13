@@ -13,7 +13,7 @@
 #ifndef GEL_MATH_VECTOR_H
 # define GEL_MATH_VECTOR_H
 
-# include "clamp.h"
+# include "math.h"
 
 typedef float	t_vec2[2];
 
