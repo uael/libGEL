@@ -8,7 +8,11 @@ t_plane plane_new(t_vec3 position, t_vec3 direction) {
 }
 
 float plane_distance(t_plane p, t_vec3 point) {
-    return vec3_dot(vec3_sub(point, p.position), p.direction);
+    t_vec3 v;
+
+    vec3cpy(v, point);
+    vec3sub(v, p.position);
+    return vec3dot(v, p.direction);
 }
 
 t_plane plane_transform(t_plane p, t_mat4 world, t_mat3 world_normal) {
