@@ -18,14 +18,14 @@ float plane_distance(t_plane p, t_vec3 point) {
 t_plane plane_transform(t_plane p, t_mat4 world, t_mat3 world_normal) {
     p.position  = mat4_mul_vec3(world, p.position);
     p.direction = mat3_mul_vec3(world_normal, p.direction);
-    p.direction = vec3norm(p.direction);
+    vec3norm(p.direction);
     return p;
 }
 
 t_plane plane_transform_space(t_plane p, t_mat3 space, t_mat3 space_normal) {
     p.position  = mat3_mul_vec3(space, p.position);
     p.direction = mat3_mul_vec3(space_normal, p.direction);
-    p.direction = vec3norm(p.direction);
+    vec3norm(p.direction);
     return p;
 }
 
@@ -283,14 +283,14 @@ t_frustum frustum_slice(frustum f, float start, float end) {
 
 t_vec3 frustum_center(t_frustum f) {
     t_vec3 total = vec3zero();
-    total = vec3add(total, f.ntr);
-    total = vec3add(total, f.ftr);
-    total = vec3add(total, f.ntl);
-    total = vec3add(total, f.ftl);
-    total = vec3add(total, f.nbr);
-    total = vec3add(total, f.fbr);
-    total = vec3add(total, f.nbl);
-    total = vec3add(total, f.fbl);
+    vec3add(total, f.ntr);
+    vec3add(total, f.ftr);
+    vec3add(total, f.ntl);
+    vec3add(total, f.ftl);
+    vec3add(total, f.nbr);
+    vec3add(total, f.fbr);
+    vec3add(total, f.nbl);
+     vec3add(total, f.fbl);
     return vec3div(total, 8);
 }
 
