@@ -15,4 +15,15 @@
 
 # include "math/vector.h"
 
+# include "geometry/box.h"
+# include "geometry/capsule.h"
+# include "geometry/ellipsoid.h"
+# include "geometry/frustrum.h"
+# include "geometry/mesh.h"
+# include "geometry/model.h"
+# include "geometry/plane.h"
+# include "geometry/sphere.h"
+# include "geometry/triangle.h"
+# include "geometry/vertex.h"
+
 #endif
