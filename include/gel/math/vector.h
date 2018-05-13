@@ -13,48 +13,66 @@
 #ifndef GEL_MATH_VECTOR_H
 # define GEL_MATH_VECTOR_H
 
-# include <stdbool.h>
+# include "clamp.h"
 
-typedef struct	s_v2
-{
-	float		x;
-	float		y;
-}				t_v2;
+typedef float	t_vec2[2];
 
-extern t_v2		v2(float x, float y);
-extern t_v2		v2zero(void);
-extern t_v2		v2one(void);
-extern t_v2		v2add(t_v2 v1, t_v2 v2);
-extern t_v2		v2sub(t_v2 v1, t_v2 v2);
-extern t_v2		v2mul(t_v2 v, float fac);
-extern t_v2		v2mul_vec2(t_v2 v1, t_v2 v2);
-extern t_v2		v2div(t_v2 v, float fac);
-extern t_v2		v2div_vec2(t_v2 v1, t_v2 v2);
-extern t_v2		v2pow(t_v2 v, float exp);
-extern t_v2		v2neg(t_v2 v);
-extern t_v2		v2abs(t_v2 v);
-extern t_v2		v2floor(t_v2 v);
-extern t_v2		v2fmod(t_v2 v, float val);
-extern t_v2		v2max(t_v2 v, float x);
-extern t_v2		v2min(t_v2 v, float x);
-extern t_v2		v2clamp(t_v2 v, float b, float t);
-extern bool		v2equ(t_v2 v1, t_v2 v2);
-extern float	v2dot(t_v2 v1, t_v2 v2);
-extern float	v2length_sqrd(t_v2 v);
-extern float	v2length(t_v2 v);
-extern float	v2dist_sqrd(t_v2 v1, t_v2 v2);
-extern float	v2dist(t_v2 v1, t_v2 v2);
-extern float	v2dist_manhattan(t_v2 v1, t_v2 v2);
-extern t_v2		v2normalize(t_v2 v);
-extern t_v2		v2reflect(t_v2 v1, t_v2 v2);
-extern t_v2		v2from_string(char *s);
-extern void		v2print(t_v2 v);
-extern void		v2to_array(t_v2 v, float *out);
-extern int		v2hash(t_v2 v);
-extern int		v2mix_hash(t_v2 v);
-extern t_v2		v2saturate(t_v2 v);
-extern t_v2		v2lerp(t_v2 v1, t_v2 v2, float amount);
-extern t_v2		v2smoothstep(t_v2 v1, t_v2 v2, float amount);
-extern t_v2		v2smootherstep(t_v2 v1, t_v2 v2, float amount);
+extern void		vec2cpy(t_vec2 a, t_vec2 const b);
+extern void		vec2add(t_vec2 a, t_vec2 const b);
+extern void		vec2sub(t_vec2 a, t_vec2 const b);
+extern void		vec2mul(t_vec2 a, t_vec2 const b);
+extern void		vec2div(t_vec2 a, float fac);
+extern void		vec2pow(t_vec2 a, float exp);
+extern void		vec2min(t_vec2 a, float x);
+extern void		vec2max(t_vec2 a, float x);
+extern void		vec2fmod(t_vec2 a, float val);
+extern void		vec2scale(t_vec2 a, float fac);
+extern void		vec2clamp(t_vec2 a, float bottom, float top);
+extern void		vec2neg(t_vec2 a);
+extern void		vec2abs(t_vec2 a);
+extern void		vec2norm(t_vec2 a);
+extern void		vec2floor(t_vec2 a);
+extern float	vec2dot(t_vec2 const a, t_vec2 const b);
+extern float	vec2len(t_vec2 const a);
+
+typedef float	t_vec3[3];
+
+extern void		vec3cpy(t_vec3 a, t_vec3 const b);
+extern void		vec3add(t_vec3 a, t_vec3 const b);
+extern void		vec3sub(t_vec3 a, t_vec3 const b);
+extern void		vec3mul(t_vec3 a, t_vec3 const b);
+extern void		vec3div(t_vec3 a, float fac);
+extern void		vec3pow(t_vec3 a, float exp);
+extern void		vec3min(t_vec3 a, float x);
+extern void		vec3max(t_vec3 a, float x);
+extern void		vec3fmod(t_vec3 a, float val);
+extern void		vec3scale(t_vec3 a, float fac);
+extern void		vec3clamp(t_vec3 a, float bottom, float top);
+extern void		vec3neg(t_vec3 a);
+extern void		vec3abs(t_vec3 a);
+extern void		vec3norm(t_vec3 a);
+extern void		vec3floor(t_vec3 a);
+extern float	vec3dot(t_vec3 const a, t_vec3 const b);
+extern float	vec3len(t_vec3 const a);
+
+typedef float	t_vec4[4];
+
+extern void		vec4cpy(t_vec4 a, t_vec4 const b);
+extern void		vec4add(t_vec4 a, t_vec4 const b);
+extern void		vec4sub(t_vec4 a, t_vec4 const b);
+extern void		vec4mul(t_vec4 a, t_vec4 const b);
+extern void		vec4div(t_vec4 a, float fac);
+extern void		vec4pow(t_vec4 a, float exp);
+extern void		vec4min(t_vec4 a, float x);
+extern void		vec4max(t_vec4 a, float x);
+extern void		vec4fmod(t_vec4 a, float val);
+extern void		vec4scale(t_vec4 a, float fac);
+extern void		vec4clamp(t_vec4 a, float bottom, float top);
+extern void		vec4neg(t_vec4 a);
+extern void		vec4abs(t_vec4 a);
+extern void		vec4norm(t_vec4 a);
+extern void		vec4floor(t_vec4 a);
+extern float	vec4dot(t_vec4 const a, t_vec4 const b);
+extern float	vec4len(t_vec4 const a);
 
 #endif

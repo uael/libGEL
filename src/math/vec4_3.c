@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math/v2_1.h                                        :+:      :+:    :+:   */
+/*   math/vec4_3.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,39 +12,39 @@
 
 #include <gel/math/vector.h>
 
-t_v2	v2(float x, float y)
+inline void		vec4clamp(t_vec4 a, float bottom, float top)
 {
-	t_v2 v;
-
-	v.x = x;
-	v.y = y;
-	return (v);
+	a[0] = clampf(a[0], bottom, top);
+	a[1] = clampf(a[1], bottom, top);
+	a[2] = clampf(a[2], bottom, top);
+	a[3] = clampf(a[3], bottom, top);
 }
 
-t_v2	v2zero(void)
+inline void		vec4neg(t_vec4 a)
 {
-	return v2(0, 0);
+	a[0] = -a[0];
+	a[1] = -a[1];
+	a[2] = -a[2];
+	a[3] = -a[3];
 }
 
-t_v2	v2one(void)
+inline void		vec4abs(t_vec4 a)
 {
-	return v2(1, 1);
+	a[0] = fabsf(a[0]);
+	a[1] = fabsf(a[1]);
+	a[2] = fabsf(a[2]);
+	a[3] = fabsf(a[3]);
 }
 
-t_v2	v2add(t_v2 v1, t_v2 v2)
+inline void		vec4norm(t_vec4 a)
 {
-	t_v2 v;
-
-	v.x = v1.x + v2.x;
-	v.y = v1.y + v2.y;
-	return (v);
+	vec4scale(a, 1.f / vec4len(a));
 }
 
-t_v2	v2sub(t_v2 v1, t_v2 v2)
+inline void		vec4floor(t_vec4 a)
 {
-	t_v2 v;
-
-	v.x = v1.x - v2.x;
-	v.y = v1.y - v2.y;
-	return (v);
+	a[0] = floorf(a[0]);
+	a[1] = floorf(a[1]);
+	a[2] = floorf(a[2]);
+	a[3] = floorf(a[3]);
 }
