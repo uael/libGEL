@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math/math.c                                        :+:      :+:    :+:   */
+/*   gel/math/quat.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <gel/math/math.h>
+#ifndef GEL_MATH_QUAT_H
+# define GEL_MATH_QUAT_H
 
-inline float	clampf(float x, float bottom, float top)
-{
-	x = fmaxf(x, bottom);
-	x = fminf(x, top);
-	return (x);
-}
+# include "vector.h"
+
+typedef float	t_quat[4];
+
+extern void		quatcpy(t_quat a, t_quat const b);
+extern void		quatid(t_quat a);
+extern void		quatadd(t_quat a, t_quat const b);
+extern void		quatsub(t_quat a, t_quat const b);
+extern void		quatmul(t_quat a, t_quat const b);
+extern void		quatconj(t_quat a);
+extern void		quatscale(t_quat a, float fac);
+extern void		quatrot(t_quat a, t_vec3 axis, float deg);
+
+#endif
